@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Application</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Expense Tracker</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <form action="/users/register" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+        <section>
+            <h2>Login Form</h2>
+            <form action="/users/login" method="POST">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                
+                <input type="submit" value="Login">
+            </form>
+        </section>
+
+        <section>
+            <h2>Add Expense</h2>
+            <form action="/expenses/add" method="POST">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description">
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                
+                <input type="submit" value="Add Expense">
+            </form>
+        </section>
+
+        <section>
+            <h2>Add Category</h2>
+            <form action="/categories/add" method="POST">
+                <label for="name">Category Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <input type="submit" value="Add Category">
+            </form>
+        </section>
+
+        <section>
+            <h2>User Information</h2>
+            <!-- Add table or display logic for user information here -->
+        </section>
+
+        <section>
+            <h2>External Link</h2>
+            <p>Visit <a href="https://google.com" target="_blank">Google</a></p>
+        </section>
+    </main>
+</body>
+</html>
